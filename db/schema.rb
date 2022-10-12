@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_12_021214) do
+ActiveRecord::Schema.define(version: 2022_10_12_031035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2022_10_12_021214) do
     t.integer "miles"
     t.boolean "available_for_lease"
     t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dealerships", force: :cascade do |t|
+    t.string "city"
+    t.string "dealername"
+    t.integer "number_of_stars_rating"
+    t.boolean "lease_program"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
