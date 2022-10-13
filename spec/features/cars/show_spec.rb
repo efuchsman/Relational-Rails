@@ -9,7 +9,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Car Show Page" do
+RSpec.describe "Car Show Page", type: :feature do
   describe "As a visitor" do
     describe "When I visit '/cars/:id'" do
       it "Then I see the child with that id including the child's attributes" do

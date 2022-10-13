@@ -9,7 +9,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Dealership Show Page" do
+RSpec.describe "Dealership Show Page", type: :feature do
   describe "As a visitor" do
     describe "When I visit '/dealerships/:id'" do
       it "Then I see the dealership with that id including the dealership's attributes" do

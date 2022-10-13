@@ -9,7 +9,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Cars Index Page" do
+RSpec.describe "Cars Index Page", type: :feature do
   describe "As a visitor" do
     describe "When I visit '/cars'" do
       it "Then I see each car in the system including the car's attributes" do
