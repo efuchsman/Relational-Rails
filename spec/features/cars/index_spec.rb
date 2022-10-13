@@ -19,13 +19,13 @@ RSpec.describe "Cars Index Page", type: :feature do
         car_3 = dealership.cars.create!(make: "Mercedes-Benz", model: "C300", year: 2019, miles: 24000, available_for_lease: true, dealer_id: 1, price: 28000)
 
         visit "/cars"
-        # save_and_open_page
+        #save_and_open_page
         expect(page).to have_content(car_1.make)
         expect(page).to have_content(car_1.model)
         expect(page).to have_content(car_1.year)
         expect(page).to have_content(car_1.miles)
         expect(page).to have_content(car_1.available_for_lease)
-        expect(page).to have_content(car_1.dealer_id)
+        # expect(page).to have_content(car_1.dealer_id)
         expect(page).to have_content(car_1.price)
 
         expect(page).to have_content(car_2.make)
@@ -33,7 +33,7 @@ RSpec.describe "Cars Index Page", type: :feature do
         expect(page).to have_content(car_2.year)
         expect(page).to have_content(car_2.miles)
         expect(page).to have_content(car_2.available_for_lease)
-        expect(page).to have_content(car_2.dealer_id)
+        # expect(page).to have_content(car_2.dealer_id)
         expect(page).to have_content(car_2.price)
 
         expect(page).to have_content(car_3.make)
@@ -41,7 +41,7 @@ RSpec.describe "Cars Index Page", type: :feature do
         expect(page).to have_content(car_3.year)
         expect(page).to have_content(car_3.miles)
         expect(page).to have_content(car_3.available_for_lease)
-        expect(page).to have_content(car_3.dealer_id)
+        # expect(page).to have_content(car_3.dealer_id)
         expect(page).to have_content(car_3.price)
       end
     end
