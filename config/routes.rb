@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/dealerships', to: 'dealerships#index'
   # get '/dealerships/new', to: 'dealerships#new'
   # post '/dealerships', to: 'dealerships#create'
-  # get '/dealerships/:id', to: 'dealerships#show'
+   get '/dealerships/:id', to: 'dealerships#show'
   # get '/dealerships/:id/edit', to: 'dealerships#edit'
   # patch '/dealerships/:id', to: 'dealerships#update'
   # delete '/dealerships/:id', to: 'dealerships#destroy'
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/cars', to: 'cars#index'
   # get '/cars/new', to: 'cars#new'
   # post '/cars', to: 'cars#create'
-  # get '/cars/:id', to: 'cars#show'
+  get '/cars/:id', to: 'cars#show'
   # get '/cars/:id/edit', to: 'cars#edit'
   # patch '/cars/:id', to: 'cars#update'
   # delete '/cars/:id', to: "cars#destroy"
