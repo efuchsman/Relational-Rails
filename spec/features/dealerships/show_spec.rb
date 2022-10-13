@@ -11,7 +11,7 @@ require "rails_helper"
 
 RSpec.describe "Dealership Show Page" do
   describe "As a visitor" do
-    describe "When I visit '/dealerships/:id" do
+    describe "When I visit '/dealerships/:id'" do
       it "Then I see the dealership with that id including the dealership's attributes" do
         dealership_1 = Dealership.create!(city: "Denver", dealername: "Eli's Used Car Palace", number_of_stars_rating: 3, lease_program: true)
         dealership_2 = Dealership.create!(city: "Aurora", dealername: "Shirley's Premier Used Cars", number_of_stars_rating: 5, lease_program: true)
