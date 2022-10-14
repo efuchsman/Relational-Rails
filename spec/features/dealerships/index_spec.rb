@@ -9,7 +9,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Dealerships Index Page" do
+RSpec.describe "Dealerships Index Page", type: :feature do
   describe "As a visitor" do
     describe "When I visit '/dealerships'" do
       it "Then I see the name of each dealership in the system" do

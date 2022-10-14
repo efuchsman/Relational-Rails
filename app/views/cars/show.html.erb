@@ -3,5 +3,5 @@
 <h4>Year: <%= @car.year %></h4>
 <p>Miles: <%= @car.miles %></p>
 <p>Leasing Options?: <%= @car.available_for_lease%></p>
-<p>Dealer Id: <%= @car.dealer_id %></p>
+<p> Located at: <%= @car.dealership.dealername %></p>
 <h4>Price: <%= "$#{@car.price}" %></h4>
