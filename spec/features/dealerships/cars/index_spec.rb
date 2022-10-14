@@ -41,7 +41,6 @@ RSpec.describe "Dealership Cars Index", type: :feature do
         expect(page).to have_content(@car_3.miles)
         expect(page).to have_content(@car_3.available_for_lease)
         expect(page).to have_content(@car_3.price)
-
       end
     end
   end
