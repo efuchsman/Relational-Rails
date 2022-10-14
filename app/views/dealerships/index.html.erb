@@ -1,6 +1,8 @@
 <h1>Dealerships</h1>
 
 <% @dealerships.each do |dealership| %>
-<h2><%= dealership.dealername%></h2>
-
+  <p>
+    <b><%= dealership.dealername%></b>
+      Created at: <%= dealership.created_at %>
+  </p>
 <% end %>

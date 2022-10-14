@@ -20,7 +20,7 @@ RSpec.describe "Dealership Cars Index", type: :feature do
       end
       it "Then I see each car that is associated with the dealership with each car's attributes" do
         visit "/dealerships/#{@dealership.id}/cars"
- save_and_open_page
+
         expect(page).to have_content(@car_1.make)
         expect(page).to have_content(@car_1.model)
         expect(page).to have_content(@car_1.year)
