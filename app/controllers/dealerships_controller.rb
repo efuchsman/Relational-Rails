@@ -1,6 +1,6 @@
 class DealershipsController < ApplicationController
   def index
-    @dealerships = Dealership.all
+    @dealerships = most_recently_created_first(Dealership.all)
   end
 
   def new
@@ -15,5 +15,9 @@ class DealershipsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def most_recently_created_first(dealerships)
+    dealerships.order(:created_at).reverse
   end
 end
