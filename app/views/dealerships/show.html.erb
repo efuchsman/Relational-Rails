@@ -5,3 +5,4 @@
 <p>City: <%= @dealership.city %></p>
 <p>Leasing Available? <%= @dealership.lease_program %></p>
 <p>Total Number of Vehicles in Inventory: <%= @dealership.counting_cars %></p>
+<%= link_to "Dealership Inventory", "/dealerships/#{@dealership.id}/cars" %>
