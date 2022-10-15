@@ -1,8 +1,10 @@
+<%= link_to "Cars Index", "/cars" %>
+<%= link_to "Dealerships Index", "/dealerships" %>
 <h1>Dealerships</h1>
 
 <% @dealerships.each do |dealership| %>
   <p>
-    <b><%= dealership.dealername%></b>
+    <b><%= link_to dealership.dealername, "/dealerships/#{dealership.id}"%></b>
       Created at: <%= dealership.created_at %>
   </p>
 <% end %>

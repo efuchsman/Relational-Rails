@@ -1,12 +1,3 @@
-# [ ] done
-
-# User Story 5, Parent Children Index
-
-# As a visitor
-# When I visit '/parents/:parent_id/child_table_name'
-# Then I see each Child that is associated with that Parent with each Child's attributes
-# (data from each column that is on the child table)
-
 require 'rails_helper'
 
 RSpec.describe "Dealership Cars Index", type: :feature do
@@ -18,6 +9,7 @@ RSpec.describe "Dealership Cars Index", type: :feature do
         @car_2 = @dealership.cars.create!(make: "BMW", model: "440i", year: 2017, miles: 51000, available_for_lease: false, dealer_id: 1, price: 19500)
         @car_3 = @dealership.cars.create!(make: "Mercedes-Benz", model: "C300", year: 2019, miles: 24000, available_for_lease: true, dealer_id: 1, price: 28000)
       end
+
       it "Then I see each car that is associated with the dealership with each car's attributes" do
         visit "/dealerships/#{@dealership.id}/cars"
 
