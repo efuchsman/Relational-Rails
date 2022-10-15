@@ -1,6 +1,8 @@
+<%= link_to "Dealerships Index", "/dealerships" %>
 
 <h1><%= @dealership.dealername %>
 <h3>Rating: <%= "#{@dealership.number_of_stars_rating} Stars" %></h3>
 <p>City: <%= @dealership.city %></p>
 <p>Leasing Available? <%= @dealership.lease_program %></p>
 <p>Total Number of Vehicles in Inventory: <%= @dealership.counting_cars %></p>
+<%= link_to "Dealership Inventory", "/dealerships/#{@dealership.id}/cars" %>

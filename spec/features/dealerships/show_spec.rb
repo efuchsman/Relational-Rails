@@ -66,6 +66,18 @@ RSpec.describe "Dealership Show Page", type: :feature do
         expect(page).to have_content("Total Number of Vehicles in Inventory")
         expect(@dealership_2.counting_cars).to eq(0)
       end
+
+      it 'has a link to /dealerships' do
+        visit "/dealerships/#{@dealership_1.id}"
+        click_on "Dealerships Index"
+        expect(current_path).to eq("/dealerships")
+      end
+
+      it "has a link to the dealership's inventory" do
+        visit "/dealerships/#{@dealership_1.id}"
+        click_on "Dealership Inventory"
+        expect(current_path).to eq("/dealerships/#{@dealership_1.id}/cars")
+      end
     end
   end
 end
