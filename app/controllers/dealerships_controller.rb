@@ -4,7 +4,9 @@ class DealershipsController < ApplicationController
   end
 
   def new
+  end
 
+  def edit
   end
 
   def create
