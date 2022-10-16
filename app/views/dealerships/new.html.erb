@@ -1,0 +1,11 @@
+<%= form_with url: '/dealerships', method: :post, local: true do |form| %>
+<%= form.label "Name" %>
+<%= form.text_field :dealername %>
+<%= form.label "Rating(Number of Stars)" %>
+<%= form.text_field :number_of_stars_rating %>
+<%= form.label "City" %>
+<%= form.text_field :city %>
+<%= form.label "Leasing Available?(true/false)" %>
+<%= form.text_field :lease_program %>
+<%= form.submit "Create Dealership" %>
+<% end %>

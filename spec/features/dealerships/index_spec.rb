@@ -12,17 +12,21 @@ RSpec.describe "Dealerships Index Page", type: :feature do
       end
 
       it "Then I see the name of each dealership in the system" do
+
+
         expect(page).to have_content(@dealership_1.dealername)
         expect(page).to have_content(@dealership_2.dealername)
         expect(page).to have_content(@dealership_3.dealername)
       end
 
       it "I see that records are ordered by most recently created" do
+
         expect("Becky's Autorama").to appear_before("Shirley's Premier Used Cars")
         expect("Shirley's Premier Used Cars").to appear_before("Eli's Used Car Palace")
       end
 
        it "displays when the dealerships were created" do
+
         expect(page).to have_content(@dealership_1.created_at)
         expect(page).to have_content(@dealership_2.created_at)
         expect(page).to have_content(@dealership_3.created_at)
