@@ -7,6 +7,7 @@ class DealershipsController < ApplicationController
   end
 
   def edit
+    @dealership = Dealership.find(params[:id])
   end
 
   def create
@@ -18,6 +19,12 @@ class DealershipsController < ApplicationController
     @dealership = Dealership.find(params[:id])
   end
 
+  def update
+    dealership = Dealership.find(params[:id])
+    dealership.update(dealership_params)
+    redirect_to "/dealerships/#{dealership.id}"
+  end
+
   def destroy
   end
 
@@ -25,6 +32,7 @@ class DealershipsController < ApplicationController
     dealerships.order(:created_at).reverse
   end
 
+  private
   def dealership_params
     params.permit(:dealername, :city, :number_of_stars_rating, :lease_program)
   end

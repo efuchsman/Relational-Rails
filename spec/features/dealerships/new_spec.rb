@@ -22,8 +22,9 @@ RSpec.describe 'Dealership Creation' do
         describe "And I click the button 'Create Dealership' to submit the form" do
           it " Then a `POST` request is sent the '/dealerships' route and I am redirected to the Parent Index page where I see the new Parent displayed." do
             visit '/dealerships/new'
-
+            # save_and_open_page
             fill_in(:dealername, with: "EchoPark")
+            fill_in(:number_of_stars_rating, with: 3)
             fill_in(:city, with: "Thorton")
             fill_in(:lease_program, with: true)
             click_button('Create Dealership')
