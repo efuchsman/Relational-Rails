@@ -4,10 +4,17 @@ class DealershipsController < ApplicationController
   end
 
   def new
+
   end
 
   def create
-
+    dealership = Dealership.create!(
+      dealername: params[:dealername],
+      city: params[:city],
+      number_of_stars_rating: params[:number_of_stars_rating],
+      lease_program: params[:lease_program]
+    )
+    redirect_to "/dealerships"
   end
 
   def show
