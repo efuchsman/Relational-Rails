@@ -7,3 +7,5 @@
 <p>Leasing Options? <%= car.available_for_lease%></p>
 <h4>Price: <%= "$#{car.price}" %></h4>
 <% end %>
+
+<%= link_to "Add Vehicle", "/dealerships/#{@dealership.id}/cars/new" %>
