@@ -8,12 +8,7 @@ class DealershipsController < ApplicationController
   end
 
   def create
-    dealership = Dealership.create!(
-      dealername: params[:dealername],
-      city: params[:city],
-      number_of_stars_rating: params[:number_of_stars_rating],
-      lease_program: params[:lease_program]
-    )
+    dealership = Dealership.create!(dealership_params)
     redirect_to "/dealerships"
   end
 
@@ -26,5 +21,9 @@ class DealershipsController < ApplicationController
 
   def most_recently_created_first(dealerships)
     dealerships.order(:created_at).reverse
+  end
+
+  def dealership_params
+    params.permit(:dealername, :city, :number_of_stars_rating, :lease_program)
   end
 end
