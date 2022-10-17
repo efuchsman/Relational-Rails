@@ -6,6 +6,7 @@
   <p>
     <b><%= link_to dealership.dealername, "/dealerships/#{dealership.id}"%></b>
       Created at: <%= dealership.created_at %>
+      <%= link_to "Edit #{dealership.dealername}", "/dealerships/#{dealership.id}/edit"%>
   </p>
 <% end %>
 
