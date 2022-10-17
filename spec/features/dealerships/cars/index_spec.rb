@@ -52,6 +52,13 @@ RSpec.describe "Dealership Cars Index", type: :feature do
 
     visit "/dealerships/#{dealership.id}/cars"
 
+    expect("Mercedes-Benz").to appear_before("BMW")
+    expect("BMW").to appear_before('Audi')
+
+    expect(page).to have_button("Sort By Make")
+
+    click_button "Sort By Make"
+
     expect("Audi").to appear_before("BMW")
     expect("BMW").to appear_before("Mercedes-Benz")
   end

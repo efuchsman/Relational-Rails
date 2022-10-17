@@ -1,7 +1,10 @@
 class DealershipCarsController < ApplicationController
   def index
     @dealership = Dealership.find(params[:id])
-    @cars = @dealership.cars.order(:make)
+    @cars = @dealership.cars
+    if params[:sort_by_make] == "true"
+      @cars = @dealership.cars.order(:make)
+    end
   end
 
   def new

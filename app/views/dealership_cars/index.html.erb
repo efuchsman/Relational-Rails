@@ -1,4 +1,8 @@
 <%= link_to "Back to Dealership", "/dealerships/#{@dealership.id}" %>
+<br>
+<br>
+<%= button_to "Sort By Make", "/dealerships/#{@dealership.id}/cars", method: :get, params: {sort_by_make: true} %>
+
 <% @cars.each do |car| %>
 <h2><%= car.make %></h2>
 <h3>Model: <%= car.model %></h3>
