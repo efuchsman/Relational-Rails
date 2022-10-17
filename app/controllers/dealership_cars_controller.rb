@@ -1,7 +1,7 @@
 class DealershipCarsController < ApplicationController
   def index
     @dealership = Dealership.find(params[:id])
-    @cars = @dealership.cars
+    @cars = @dealership.cars.order(:make)
   end
 
   def new
