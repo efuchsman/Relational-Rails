@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/dealerships/:id/edit', to: 'dealerships#edit'
   patch '/dealerships/:id', to: 'dealerships#update'
-  # delete '/dealerships/:id', to: 'dealerships#destroy'
+  delete '/dealerships/:id', to: 'dealerships#destroy'
 
   get '/cars', to: 'cars#index'
   get '/cars/:id', to: 'cars#show'
