@@ -5,6 +5,11 @@ class DealershipCarsController < ApplicationController
     if params[:sort_by_make] == "true"
       @cars = @dealership.cars.order(:make)
     end
+
+    if params[:miles_threshold] != nil
+      miles = params[:miles_threshold]
+      @cars = @cars.miles_threshold(miles)
+    end
   end
 
   def new

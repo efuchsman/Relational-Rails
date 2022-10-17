@@ -77,5 +77,14 @@ RSpec.describe "Dealership Cars Index", type: :feature do
       expect(page).to have_content("Display cars over a given mile threshold")
       expect(page).to have_button("Show")
     end
+
+    it "Displays cars with more miles than the given threshold" do
+      visit "/dealerships/#{@dealership.id}/cars"
+      fill_in(:miles_threshold, with: 20000)
+
+      click_button "Show"
+
+      expect(page).to_not have_content(@car_3)
+    end
   end
 end

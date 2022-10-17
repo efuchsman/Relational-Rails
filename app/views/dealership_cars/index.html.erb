@@ -5,7 +5,7 @@
 <br>
 <%= form_with url: "/dealerships/#{@dealership.id}/cars", method: :get, local: true do |form| %>
 <%= form.label  "Display Cars Over A Given Mile Threshold" %>
-<%= form.text_field :miles %>
+<%= form.text_field :miles_threshold %>
 <%= form.submit "Show" %>
 <% end %>
 <br>
