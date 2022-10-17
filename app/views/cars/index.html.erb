@@ -4,6 +4,7 @@
 <% @cars.each do |car| %>
 <p>
 <b><%= car.make %></b>
+<%= link_to "Show", "/cars/#{car.id}" %>
 <%= link_to  "Edit Vehicle", "/cars/#{car.id}/edit"%>
 <p>
 <p>Model: <%= car.model %></p>
