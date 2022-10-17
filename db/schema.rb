@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2022_10_13_183101) do
   enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
-    t.integer "dealer_id"
     t.string "make"
     t.string "model"
     t.integer "year"

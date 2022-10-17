@@ -45,9 +45,9 @@ RSpec.describe "Dealership Show Page", type: :feature do
       end
 
       it "shows the total number of vehicles in inventory" do
-        @car_1 = @dealership_1.cars.create!(make: "Audi", model: "A4", year: 2020, miles: 16000, available_for_lease: true, dealer_id: 1, price: 37000)
-        @car_2 = @dealership_1.cars.create!(make: "BMW", model: "440i", year: 2017, miles: 51000, available_for_lease: false, dealer_id: 1, price: 19500)
-        @car_3 = @dealership_1.cars.create!(make: "Mercedes-Benz", model: "C300", year: 2019, miles: 24000, available_for_lease: true, dealer_id: 1, price: 28000)
+        @car_1 = @dealership_1.cars.create!(make: "Audi", model: "A4", year: 2020, miles: 16000, available_for_lease: true, price: 37000)
+        @car_2 = @dealership_1.cars.create!(make: "BMW", model: "440i", year: 2017, miles: 51000, available_for_lease: false, price: 19500)
+        @car_3 = @dealership_1.cars.create!(make: "Mercedes-Benz", model: "C300", year: 2019, miles: 24000, available_for_lease: true, price: 28000)
 
         visit "dealerships/#{@dealership_1.id}"
         expect(page).to have_content("Total Number of Vehicles in Inventory")
