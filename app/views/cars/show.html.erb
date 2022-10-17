@@ -9,3 +9,4 @@
 <h4>Price: <%= "$#{@car.price}" %></h4>
 
 <%= link_to "Edit Vehicle", "/cars/#{@car.id}/edit" %>
+<%= button_to "Delete", "/cars/#{@car.id}", method: :delete %>
