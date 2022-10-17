@@ -7,4 +7,6 @@
 <p>Total Number of Vehicles in Inventory: <%= @dealership.counting_cars %></p>
 <%= link_to "Dealership Inventory", "/dealerships/#{@dealership.id}/cars" %>
 <%= link_to "Edit Dealership", "/dealerships/#{@dealership.id}/edit" %>
+<br>
+<br>
 <%= button_to "Delete Dealership", "/dealerships/#{@dealership.id}", method: :delete %>
