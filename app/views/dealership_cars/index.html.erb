@@ -2,7 +2,13 @@
 <br>
 <br>
 <%= button_to "Sort By Make", "/dealerships/#{@dealership.id}/cars", method: :get, params: {sort_by_make: true} %>
-
+<br>
+<%= form_with url: "/dealerships/#{@dealership.id}/cars", method: :get, local: true do |form| %>
+<%= form.label  "Display Cars Over A Given Mile Threshold" %>
+<%= form.text_field :miles %>
+<%= form.submit "Show" %>
+<% end %>
+<br>
 <% @cars.each do |car| %>
 <h2><%= car.make %></h2>
 <h3>Model: <%= car.model %></h3>
