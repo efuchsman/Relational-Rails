@@ -2,9 +2,12 @@
 <%= link_to "Dealerships Index", "/dealerships" %>
 <h1>Cars</h1>
 <% @cars.each do |car| %>
-<h2><%= car.make %></h2>
-<h3>Model: <%= car.model %></h3>
-<h4>Year: <%= car.year %></h4>
+<p>
+<b><%= car.make %></b>
+<%= link_to  "Edit Vehicle", "/cars/#{car.id}/edit"%>
+<p>
+<p>Model: <%= car.model %></p>
+<p>Year: <%= car.year %></p>
 <p>Miles: <%= car.miles %></p>
 <p>Leasing Options? <%= car.available_for_lease%></p>
 <p> Located at: <%= car.dealership.dealername %></p>

@@ -56,5 +56,11 @@ RSpec.describe "Cars Index Page", type: :feature do
 
       expect(page).to_not have_content("Hilux")
     end
+
+    it "can edit Cars from the index page" do
+      visit "/cars"
+
+      expect(page).to have_link("Edit Vehicle")
+    end
   end
 end
