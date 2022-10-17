@@ -62,5 +62,11 @@ RSpec.describe "Cars Index Page", type: :feature do
 
       expect(page).to have_link("Edit Vehicle")
     end
+
+    it "links to a Car's Show page" do
+      visit '/cars'
+
+      expect(page).to have_link("Show")
+    end
   end
 end

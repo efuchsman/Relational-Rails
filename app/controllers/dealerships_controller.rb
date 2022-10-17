@@ -26,6 +26,10 @@ class DealershipsController < ApplicationController
   end
 
   def destroy
+    dealership = Dealership.find(params[:id])
+    dealership.cars.destroy_all
+    dealership.destroy
+    redirect_to "/dealerships"
   end
 
   def most_recently_created_first(dealerships)
