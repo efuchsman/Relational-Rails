@@ -50,5 +50,17 @@ RSpec.describe "Dealerships Index Page", type: :feature do
         expect(current_path).to eq("/dealerships/#{@dealership_1.id}")
       end
     end
+
+    it 'can update dealerships from the Dealership Index' do
+      dealership_1 = Dealership.create!(city: "Denver", dealername: "Eli's Used Car Palace", number_of_stars_rating: 3, lease_program: true)
+      dealership_2 = Dealership.create!(city: "Aurora", dealername: "Shirley's Premier Used Cars", number_of_stars_rating: 5, lease_program: true)
+      dealership_3 = Dealership.create!(city: "Boulder", dealername: "Becky's Autorama", number_of_stars_rating: 5, lease_program: true)
+
+      visit "/dealerships"
+
+      expect(page).to have_link("Edit #{dealership_1.dealername}")
+      expect(page).to have_link("Edit #{dealership_2.dealername}")
+      expect(page).to have_link("Edit #{dealership_3.dealername}")
+    end
   end
 end
