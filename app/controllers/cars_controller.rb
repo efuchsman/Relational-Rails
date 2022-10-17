@@ -1,6 +1,6 @@
 class CarsController < ApplicationController
   def index
-    @cars = Car.all
+    @cars = Car.all.where(available_for_lease: true)
   end
 
   def edit
