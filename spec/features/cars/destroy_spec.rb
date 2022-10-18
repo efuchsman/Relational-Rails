@@ -23,6 +23,19 @@ RSpec.describe "Destroy" do
         expect(current_path).to eq("/cars")
         expect("/cars").to_not have_content(@car_2)
       end
+
+      it "Can delete vehicles from the Cars Index page" do
+        visit '/cars'
+
+        expect(page).to have_button("Delete This #{@car_1.make}")
+        expect(page).to have_button("Delete This #{@car_2.make}")
+        expect(page).to have_button("Delete This #{@car_3.make}")
+
+        click_button "Delete This #{@car_2.make}"
+
+        expect(current_path).to eq("/cars")
+        expect(page).to_not have_content(@car_2)
+      end
     end
   end
 end

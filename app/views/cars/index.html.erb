@@ -13,4 +13,5 @@
 <p>Leasing Options? <%= car.available_for_lease%></p>
 <p> Located at: <%= car.dealership.dealername %></p>
 <h4>Price: <%= "$#{car.price}" %></h4>
+<%= button_to "Delete This #{car.make}", "/cars/#{car.id}", method: :delete %>
 <% end %>
